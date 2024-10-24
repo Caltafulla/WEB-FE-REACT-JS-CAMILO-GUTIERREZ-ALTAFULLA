@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --primary-bg: #f0f4f8;
+  --primary-color: #333;
+  --accent-color: #007bff;
+  --delete-bg: #d9534f;
+  --font-family: "Montserrat";
+}
+
+body {
+  font-family: var(--font-family);
+  margin: 0;
+  padding: 0;
+  background-image: url(img/bk.jpg);
+  background-size: cover;
+  color: var(--primary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.MainContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  text-align: center;
+  position: relative;
+}
+
+.TitleC {
+  flex: 1;
+}
+
+.TitleC h1 {
+  font-size: 60px;
+  margin: 0;
+}
+
+.TitleC h4 {
+  font-size: 20px;
+  color: var(--accent-color);
+  margin: 0;
+}
+
+.TaskC {
+  flex: 1;
+  max-width: 400px;
+}
+
+.TaskInput_Container {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.TaskInput_Container input {
+  flex-grow: 1;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.TaskInput_Container button {
+  padding: 0.5rem 1rem;
+  background-color: var(--accent-color);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.TaskList {
+  margin-top: 2rem;
+  list-style: none;
+  padding: 0;
+  margin-top: 8px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.TaskItem {
+  background-color: #fff;
+  margin-bottom: 0.5rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.TaskItem button {
+  background-color: var(--delete-bg);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  width: 60px;
+  height: 35px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.MainContainer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: #ccc;
+  left: 50%;
+  transform: translateX(-50%);
+}
